@@ -7,10 +7,14 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
+        <span>Products</span>
         <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
+          <li>POS Software</li>
+          <li>ERP Software</li>
+          <li>Mobile POS</li>
+          <li>Loyalty & Customer Engagement Solutions</li>
+          <li>Menu Engineering & Food Costing</li>
+          <li>LUCID Messenger for Restaurants</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
@@ -36,7 +40,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>LUCID POS</Logo>
     </BrandContainer>
   </FooterWrapper>
 )

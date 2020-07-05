@@ -4,11 +4,12 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container } from "../global"
+import dashboard from "../../images/header-dashboard.svg"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "main" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,27 +28,26 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
-            <h1>
-              All your money,
-              <br />
-              one account
-            </h1>
+            {/* <Subtitle>Personal Finance</Subtitle> */}
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              Not Just POS
             </h2>
+            <h3>
+              360&#176; Resturant Management Solution
+            </h3>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderButton>Sign up for Demo</HeaderButton>
             </HeaderForm>
-            <FormSubtitle>
+            {/* <FormSubtitle>
               Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
-            </FormSubtitle>
+            </FormSubtitle> */}
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
+            {/* <StyledImage fluid={data.file.childImageSharp.fluid} /> */}
+            <StyledImage src={dashboard} />
+            {/* <img src={dashboard} /> */}
             <br />
           </ImageWrapper>
         </Flex>
@@ -85,12 +85,14 @@ const HeaderTextGroup = styled.div`
     }
   }
 
-  h1 {
+  h2 {
     margin: 0 0 24px;
     color: ${props => props.theme.color.primary};
+    ${props => props.theme.font_size.larger}
+
   }
 
-  h2 {
+  h3 {
     margin-bottom: 24px;
     ${props => props.theme.font_size.regular}
   }
@@ -104,7 +106,7 @@ const Flex = styled.div`
   display: grid;
   justify-content: space-between;
   align-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 64px;
@@ -113,7 +115,7 @@ const Flex = styled.div`
 
 const HeaderForm = styled.form`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 16px;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
@@ -140,6 +142,7 @@ const HeaderInput = styled.input`
   line-height: 42px;
   width: 100%;
   text-align: left;
+  margin-bottom: 8px;
   height: 60px;
   border-width: 1px;
   border-style: solid;
@@ -167,7 +170,7 @@ const HeaderButton = styled.button`
   letter-spacing: 1px;
   height: 60px;
   display: block;
-  margin-left: 8px;
+  // margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
@@ -196,8 +199,8 @@ const ImageWrapper = styled.div`
   }
 `
 
-const StyledImage = styled(Img)`
-  width: 500px;
+const StyledImage = styled.img`
+  width: 525px;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }

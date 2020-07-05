@@ -6,42 +6,41 @@ import { Section, Container } from "../global"
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <Subtitle>Products</Subtitle>
+      <SectionTitle>Resturant Managent System</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>POS Software</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+          LUCID POS supports all restaurant formats including Fine dine, QSR, Lounge Bars, chains.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
+          <FeatureTitle>ERP Software</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
+          Automate all departments of your Restaurant Business. Purchase, Inventory, F & B Costing, Finance.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
+          <FeatureTitle>Mobile POS</FeatureTitle>
           <FeatureText>
-            Create smart automated workflows and triggers for your money.
+          Handheld Order taking system. Increase Customer Satisfaction and Table turn over.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
+          <FeatureTitle>Loyalty & Customer Engagement Solutions</FeatureTitle>
           <FeatureText>
-            Easily link up to 5 banks to your finance account.
+          Build a loyal Customer base using our solutions like , eCoupons, Gift cards, Pre-paid cards, eCRM.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
+          <FeatureTitle>Menu Engineering & Food Costing</FeatureTitle>
+          <FeatureText>Increase your restaurant profitability through accurate cost analysis and menu pricing.</FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
+          <FeatureTitle>LUCID Messenger for Restaurants</FeatureTitle>
           <FeatureText>
-            High interest and rewards for hitting your goals.
+          Be informed on the move through automated SMS & email alerts and Reports on a daily basis.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
@@ -94,6 +93,7 @@ const FeatureTitle = styled.h4`
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
+  text-align: center;
 `
 
 const FeatureText = styled.p`
